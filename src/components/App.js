@@ -43,10 +43,14 @@ const App = () => {
 
     setX(updatedX);
     setY(updatedY);
-    setBallPosition({
-      left: `${updatedX}px`,
-      top: `${updatedY}px`,
-    });
+
+    // Set the ball position after a small delay
+    setTimeout(() => {
+      setBallPosition({
+        left: `${updatedX}px`,
+        top: `${updatedY}px`,
+      });
+    }, 4000);
   };
 
   useEffect(() => {
